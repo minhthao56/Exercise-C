@@ -2,13 +2,6 @@
 
 const int MAX = 100;
 
-void changePosition(int a, int b)
-{
-    int temp = a;
-    a = b;
-    b = temp;
-}
-
 void inputArr(int arr[], int n)
 {
     for (int i = 0; i < n; i++)
@@ -27,7 +20,6 @@ void outputArr(int arr[], int n)
 }
 void arrangeArr(int arr[], int n)
 {
-
     int i, j;
     for (i = 0; i < n - 1; i++)
     {
@@ -35,10 +27,17 @@ void arrangeArr(int arr[], int n)
         {
             if (arr[i] > arr[j])
             {
-                printf("%d, %d", arr[i], arr[j]);
-                changePosition(arr[i], arr[j]);
+                int temp;
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
             }
         }
+    }
+
+    for (int i = 0; i < n; i++)
+    {
+        printf("\n Phan tu thu %d la: %d", i, arr[i]);
     }
 }
 
@@ -54,5 +53,5 @@ int main()
     outputArr(arr, n);
     printf("\n Mang sau khi sap xep tang dan:");
     arrangeArr(arr, n);
-    outputArr(arr, n);
+    // outputArr(arr, n);
 }
