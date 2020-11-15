@@ -33,22 +33,22 @@ void slitArr(int arr[], int n)
         {
 
             arr1[i1] = arr[i];
-            i1 = i1 + 1;
+            i1++;
         }
         else
         {
             arr2[i2] = arr[i];
-            i2 = i2 + 1;
+            i2++;
         }
     }
-    for (size_t i = 0; i < sizeof arr1; i++)
+    for (int i = 0; i < i1; i++)
     {
-        printf("%d", arr1[i]);
+        printf("\n Phan tu mang chan arr1[%d] = %d", i, arr1[i]);
     }
-    // for (size_t i = 0; i < sizeof arr2; i++)
-    // {
-    //     printf("%d", arr2[i2]);
-    // }
+    for (int i = 0; i < i2; i++)
+    {
+        printf("\n Phan tu mang le arr2[%d] = %d", i, arr2[i]);
+    }
 }
 
 int main()
